@@ -1,52 +1,52 @@
 # basic-parking-lot
 
-Notes: 1.5 for basic func + 20 mins to test and additional functionalities
-  N - cars
-  Reg_no
-  Color
-  single entry/exit
-  Multiple => Single storey
-  Nearest slot
+Notes: 1.5 for basic func + 20 mins to test and additional functionalities<br />
+  N - cars<br />
+  Reg_no<br />
+  Color<br />
+  single entry/exit<br />
+  Multiple => Single storey<br />
+  Nearest slot<br />
 
 **Functional**
-  Allocate slots
-  Free slots
-  Get registrations by color
-  getSlotByRegNo
-  getSlotsByColor
-  createParkingLot(s-slots, l-lvls)
+  Allocate slots<br />
+  Free slots<br />
+  Get registrations by color<br />
+  getSlotByRegNo<br />
+  getSlotsByColor<br />
+  createParkingLot(s-slots, l-lvls)<br />
 
 **Non-Functional**
-  get Free Slots
-  Exception if no slots found for color/regNo
-  Exception if no slots are avialable
-  Nearest slot
-  regNo: 4digit
-  Color validation
+  get Free Slots<br />
+  Exception if no slots found for color/regNo<br />
+  Exception if no slots are avialable<br />
+  Nearest slot<br />
+  regNo: 4digit<br />
+  Color validation<br />
 
 **Design**
-1.Java Main method for ip/op aka controller here for saving some time
-2.ParkingStore: 
-    freeSlots: TreeSet<Slots>
-    Ticket: Map<tickId, Ticket>
-3.Slot: 
-    Id: int, sorting of treeset
+1.Java Main method for ip/op aka controller here for saving some time<br />
+2.ParkingStore: <br />
+    freeSlots: TreeSet<Slots><br />
+    Ticket: Map<tickId, Ticket><br />
+3.Slot: <br />
+    Id: int, sorting of treeset<br />
 
-4. Vehicle: 
-    regNo: String
-    color: Color enum
-    constructor/validator
-5. Color: RED, BLUE, GREEN
-6.Ticket: 
-  Id, slot, vehicle
+4. Vehicle: <br />
+    regNo: String<br />
+    color: Color enum<br />
+    constructor/validator<br />
+5. Color: RED, BLUE, GREEN<br />
+6.Ticket: <br />
+  Id, slot, vehicle<br />
 7.TicketingService: 
-    bookSlot( vehicle): ticketId
-    freeSlot(ticketId): void
+    bookSlot( vehicle): ticketId<br />
+    freeSlot(ticketId): void<br />
   
 8.Parking Service: 
-    + bookSlot(colorVehicle, regNoVehicle): ticketId
-    + freeSlot(ticketId): void
-    + fetchRegistrationNoByColor(color): List<Integer>
-    + fetchSlotsByColor(color): List<Slots>
-    + fetchSlotsByRegdNo(int reg):  List<Slots>
-    + createParkingLot(int noOfSlots)
+    + bookSlot(colorVehicle, regNoVehicle): ticketId<br />
+    + freeSlot(ticketId): void<br />
+    + fetchRegistrationNoByColor(color): List<Integer><br />
+    + fetchSlotsByColor(color): List<Slots><br />
+    + fetchSlotsByRegdNo(int reg):  List<Slots><br />
+    + createParkingLot(int noOfSlots)<br />
